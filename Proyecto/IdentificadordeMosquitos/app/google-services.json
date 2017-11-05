@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "89270737076",
+    "firebase_url": "https://identificador-de-mosquitos.firebaseio.com",
+    "project_id": "identificador-de-mosquitos",
+    "storage_bucket": "identificador-de-mosquitos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89270737076:android:145e216e899ef040",
+        "android_client_info": {
+          "package_name": "com.example.fernandomdelima.identificadordemosquitos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89270737076-4mkdq5on1e7u0jsvpmjvuf8qo6t44nrb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fernandomdelima.identificadordemosquitos",
+            "certificate_hash": "deda4d4e492189a678ef04162e10caf1b32f75e9"
+          }
+        },
+        {
+          "client_id": "89270737076-8ifpfj2ejkditd28cmso2qebtvqublda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVMjAJpOcoP-6rJkSzop2jakCoSVjyvUs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89270737076-8ifpfj2ejkditd28cmso2qebtvqublda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

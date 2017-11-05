@@ -1,0 +1,78 @@
+Gestion de Avistamiento:
+    * Registrar avistamiento.
+    * Consultar avistamiento por cada pregunta.
+Gestion de Reconocimiento
+    * Registrar pregunta.
+    * Modificar pregunta.
+    * Eliminar pregunta.
+    * Consultar cantidad de posibles grupos de respuestas por preguntas posibles.
+    * Consultar mosquito por cada pregunta.
+Gestion de Datos Estadisticos:
+    * Emitir reportes de mosquitos avistados o identificados por Mosquito.
+    * Emitir reportes de mosquitos avistados o identificados por Zona.
+    * Emitir datos estadisticos de los mosquitos avistados o identificados por grupo de investigacion.
+    * Emitir reporte de mosquitos avistados o identificados en un determinado rango de fechas.
+    * Emitir reporte de mosquitos avistados o identificados por banda horaria.
+    * Emitir reporte de mosquitos por banda horaria.
+Gestion de Soporte:
+    * Actualizar usuarios.
+    * Actualizar grupos de investigacion.
+    * Actualizar mosquito.
+    * Actualizar zona.
+
+
+
+
+
+
+Comportamiento - Etologia
+	Vuelo
+		Solo o pareja?
+	Como se posa en la pared
+	Pico o molesto?
+		Horario de picado (ingesta)
+
+	
+Habitat
+	Ambiente
+		Dentro de casa, en el patio, bajo un arbol, etc?
+		Sombra
+		Humedad
+		Temperatura
+		Clima
+		Estado del tiempo (soleado, lluvioso)
+		Estado del tiempo (dias anteriores)
+
+	Zona geografica
+
+Caracteristicas visible del mosquito
+	Morfologia
+		Tamanio
+		
+	Manchas
+
+
+
+
+(preguntas generales primero)
+(bitacora - horario, georeferencia)
+
+Objetivos:
+	Brindar informacion para la gestion del reconocimiento de mosquitos en Argentina. Como asi tambien, proporcionar datos estadisticos utiles para investigadores.
+
+Limites:
+	Desde:
+		Registrar las distintas especies de mosquitos.
+	Hasta:
+		Emitir datos estadisticos de mosquitos avistados por zona.
+
+Alcances
+	gestion de cuentas*
+	Actualizar Localidades, Ciudades, etc (?)
+	ABM de usuarios (y de grupos?)
+	ABM de Instituciones (sector)
+	ABM de mosquitos
+	ABM de transaccion de identificacion de mosquito
+	Emitir reportes de mosquitos avistados o identificados por Mosquito
+	Emitir reportes de mosquitos avistados o identificados por Zona
+	Emitir datos estadisticos de mosquitos avistados por grupo de investigacion

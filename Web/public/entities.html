@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="res/css/myStyle.css">
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="res/css/bootstrap.min.css">
+    <link rel="stylesheet" href="res/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="res/css/bootstrap-social.css">
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.theme.min.css">
+    
+    <script src="res/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="res/js/vendor/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="res/js/db-connection.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-messages.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.4/firebase-simple-login.js"></script>
+    <script src="res/js/module-.js"></script>
+    <script src="res/js/module-data.js"></script>
+
+</head>
+<body ng-app="module-data" ng-controller="controller-data as cData">
+    <div id="mainContainer">
+        <nav class="topMenu menu" id="loginnav">
+            <a class="hovereableToggle" href="index.html">Inicio</a>
+            <a class="hovereableToggle" href="#avistamientos">Avistamientos</a>
+            <a class="hovereableToggle" href="criteria.html">Criterios</a>
+            <a class="hovereableToggle" href="entities.html">Entidades</a>            
+            <a class="hovereableToggle" href="#contacto">Contacto</a>
+            <a href="#"><input type="text" class="logInInput" id="txtemail" placeholder="e-Mail..." ng-model="cData.email"></a>
+            <a href="#"><input type="password" class="logInInput" id="txtpassword" placeholder="Contraseña..." ng-model="cData.password"></a>
+            <a href="#"><input type="button" class="logInInput" value="Conectarse" ng-click="cData.signIn();"></a>
+            <a href="#"><input type="button" class="logInInput" value="Desconectarse" ng-click="cData.signOut();"></a>
+            <a href=""><span id="currentUserA">Visitante</span></a>
+        </nav>
+        <section id="mainContent"><br><br><br>
+            <div id="newEntity">
+                <table class="table table-striped table-hover table-dark">
+                    <tr>
+                        <td style="text-align:right;width:300px">Genero</td>
+                        <td><input type="text" name="" id="txtEntityNamePre" ng-model="cData.entityNamePre" ng-change="cData.test()" style="min-width:300px" class="form-control"></td>
+                        <td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">Especie</td>
+                        <td><input type="text" name="" id="txtEntityNamePos" ng-model="cData.entityNamePos" style="min-width:300px" class="form-control"></td>
+                        <td></td><td></td>
+                    </tr>
+                    <tr ng-repeat="(key, value) in cData.criterias">
+                        <td style="text-align:right">{{value.criteriaDescription}}</td>
+                        <td style="width:320px">
+                            <select id="{{key}}" style="min-width:300px" class="form-control">
+                                <option ng-repeat="(item, text) in value.criteriaOptionsList" value="{{item}}">{{text}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="button" class="btn btn-dark" value="Agregar" ng-click="cData.addCriteriaToEntity(key)" class="form-control">
+                            <input type="button" class="btn btn-dark" value="Quitar" ng-click="cData.removeCriteriaToEntity(key)" class="form-control">
+                        </td>
+                        <td><p style="color:rgba(5, 5, 49, 0.9)"><b>{{cData.newEntityDescription[key].toString().toUpperCase()}}</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">Imagen</td>
+                        <td><input type="file" id="file" name="file" class="file"></td>
+                        <td></td><td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><script src="res/js/upload-image.js"></script></td>
+                        <td><input type="button" style="min-width:300px" class="btn btn-dark" value="Agregar entidad!" ng-click="cData.verifyImage()" class="form-control"></td>
+                        <td></td><td></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
